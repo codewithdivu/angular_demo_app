@@ -1,0 +1,114 @@
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+input[type="text"] {
+  border: solid 1px purple;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+button {
+  padding: 10px;
+  border: solid 1px purple;
+  background: purple;
+  color: white;
+  border-radius: 8px;
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+    width: 70%;
+  }
+}
+@media (max-width: 499px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+}
+
+.listing {
+  background: #f5f5f5;
+  border-radius: 30px;
+  padding-bottom: 30px;
+}
+.listing-heading {
+  color: purple;
+  padding: 10px 20px 0 20px;
+}
+.listing-photo {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 0 0;
+}
+.listing-location {
+  /* padding: 10px 20px 20px 20px; */
+}
+/* .listing-location::before {
+  content: url("./assets/location.png") / "";
+  height: 10px;
+  width: 10px;
+} */
+section.listing a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: purple;
+}
+section.listing a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
+
+/* ------------------------- */
+.listing-photo2 {
+  height: 600px;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 30px;
+  float: right;
+}
+.listing-heading2 {
+  font-size: 48pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.listing-location::before {
+  content: url("/assets/location-pin.svg") / "";
+}
+.listing-location2 {
+  font-size: 24pt;
+  margin-bottom: 15px;
+}
+.listing-features > .section-heading {
+  color: grey;
+  font-size: 24pt;
+  margin-bottom: 15px;
+}
+.listing-features {
+  margin-bottom: 20px;
+}
+.listing-features li {
+  font-size: 14pt;
+}
+li {
+  list-style-type: none;
+}
+.listing-apply .section-heading {
+  font-size: 18pt;
+  margin-bottom: 15px;
+}
+@media (max-width: 1024px) {
+  .listing-photo2 {
+    width: 100%;
+    height: 400px;
+  }
+}
