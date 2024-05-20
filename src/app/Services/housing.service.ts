@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HousingLocation } from '../Models/housinglocation';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HousingService {
   readonly baseUrl = '../../assets';
@@ -41,8 +41,8 @@ export class HousingService {
     {
       id: 3,
       name: 'Homesteady Housing',
-      city: 'Mumbai',
-      state: 'Maharashtra',
+      city: 'Chicago',
+      state: 'IL',
       photo: `${this.baseUrl}/nature.jpg`,
       availableUnits: 1,
       wifi: true,
@@ -114,7 +114,15 @@ export class HousingService {
     return this.housingLocationList;
   }
   getHousingLocationById(id: number): HousingLocation | undefined {
-    return this.housingLocationList.find((housingLocation) => housingLocation.id === id);
+    return this.housingLocationList.find(
+      (housingLocation) => housingLocation.id === id
+    );
   }
-  constructor() { }
+
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(`FirstName is ${firstName}`);
+    console.log(`LastName is ${lastName}`);
+    console.log(`Email is ${email}`);
+  }
+  constructor() {}
 }

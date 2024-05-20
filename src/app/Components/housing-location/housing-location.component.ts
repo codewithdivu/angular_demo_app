@@ -3,6 +3,7 @@ import { HousingLocation } from './../../Models/housinglocation';
 import { Component, Input } from '@angular/core';
 import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
+
 @Component({
   selector: 'app-housing-location',
   standalone: true,
